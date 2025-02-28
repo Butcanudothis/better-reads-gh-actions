@@ -18,4 +18,15 @@ class ReviewsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.user = current_user
+
+    if @review.destroy
+      redirect_to reviews_url, notice: "Review was successfully destroyed."
+    else
+      redirect_to reviews_url, alert: "Failed to delete review."
+    end
+  end
 end
