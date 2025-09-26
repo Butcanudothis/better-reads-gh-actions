@@ -8,7 +8,7 @@ To get started with BetterReads - run the following commands.
 
 ## Using Docker
 
-Download and install Docker following this guide: https://docs.docker.com/guides/getting-started/get-docker-desktop/
+Download and install Docker following this guide: https://docs.docker.com/get-started/get-docker/
 
 Once you have downloaded docker run the following to set up the container
 
