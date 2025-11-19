@@ -2,10 +2,10 @@
 
 one:
   title: The Great Gatsby
-  author: F. Scott Fitzgerald
+  author: fitzgerald
   description: A book about a bootlegger in the 1920s
 
 two:
   title: 1984
-  author: George Orwell
+  author: orwell
   description: A book about totalitarian controls & their pitfalls
