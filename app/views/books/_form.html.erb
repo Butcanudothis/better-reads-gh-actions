@@ -18,7 +18,7 @@
 
   <div class="my-5">
     <%= form.label "Author" %>
-    <%= form.text_field :author %>
+    <%= form.collection_select :author_id, Author.order(:name), :id, :name, prompt: "Select an author" %>
   </div>
 
   <div class="my-5 h-32">
