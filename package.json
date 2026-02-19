@@ -1,0 +1,20 @@
+{
+  "name": "better-reads",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@ssh.github.com:443/Butcanudothis/better-reads-gh-actions.git",
+  "author": "butcanudothis <51348806+Butcanudothis@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.rb": [
+      "bundle exec rubocop --force-exclusion --autocorrect --fail-level autocorrect"
+    ]
+  }
+}
