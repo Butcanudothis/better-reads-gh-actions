@@ -41,7 +41,5 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.CLAUDE_API_KEY }}
-          prompt: |
-            After making code changes, always run `bundle exec rubocop --autocorrect` on changed files and fix any remaining issues before committing.
           claude_args: |
             --allowedTools "Bash(bundle exec rubocop:*)" --allowedTools "Bash(bundle exec rubocop --autocorrect:*)"
