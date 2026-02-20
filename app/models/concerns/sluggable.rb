@@ -15,6 +15,6 @@ module Sluggable
   end
 
   def to_param
-    slug
+    self.slug
   end
 end
