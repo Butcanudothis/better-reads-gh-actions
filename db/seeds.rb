@@ -125,4 +125,56 @@ Review.create!(user_id: fiona.id, book_id: fellowship.id, title: 'Dense but wort
 Review.create!(user_id: evan.id, book_id: and_then.id, title: 'Impossible to put down', rating: 5,
                content: 'Read it in one sitting. Not a single wasted word.')
 
+george = User.create(name: 'George', email: 'george@betterreads.com', password: 'betterreads')
+hannah = User.create(name: 'Hannah', email: 'hannah@betterreads.com', password: 'betterreads')
+ivan = User.create(name: 'Ivan', email: 'ivan@betterreads.com', password: 'betterreads')
+
+marquez = Author.create(name: 'Gabriel García Márquez')
+morrison = Author.create(name: 'Toni Morrison')
+woolf = Author.create(name: 'Virginia Woolf')
+kafka = Author.create(name: 'Franz Kafka')
+
+solitude_desc = 'Seven generations of the Buendía family in the fictional town of Macondo. ' \
+                "Márquez's masterpiece of magical realism won the Nobel Prize in Literature."
+solitude = Book.create(
+  title: 'One Hundred Years of Solitude', author: marquez, description: solitude_desc
+)
+
+beloved_desc = 'A former enslaved woman is haunted by the ghost of her dead daughter. ' \
+               "Morrison's Pulitzer Prize-winning novel is a devastating portrait of trauma and memory."
+beloved = Book.create(title: 'Beloved', author: morrison, description: beloved_desc)
+
+dalloway_desc = 'Clarissa Dalloway prepares for a party while a shell-shocked veteran drifts through London. ' \
+                "Woolf's stream-of-consciousness masterpiece captures a single day in luminous detail."
+dalloway = Book.create(title: 'Mrs Dalloway', author: woolf, description: dalloway_desc)
+
+metamorphosis_desc = 'Gregor Samsa wakes one morning transformed into a giant insect. ' \
+                     "Kafka's haunting novella is one of the most influential works of the 20th century."
+metamorphosis = Book.create(title: 'The Metamorphosis', author: kafka, description: metamorphosis_desc)
+
+Review.create!(user_id: george.id, book_id: solitude.id, title: 'Mesmerising and vast', rating: 5,
+               content: 'García Márquez builds a world that feels both mythic and achingly real.')
+Review.create!(user_id: hannah.id, book_id: beloved.id, title: 'Devastatingly powerful', rating: 5,
+               content: 'Morrison writes with a ferocity that stays with you long after the final page.')
+Review.create!(user_id: ivan.id, book_id: dalloway.id, title: 'A single day, perfectly rendered', rating: 4,
+               content: "Woolf's prose flows like music. The interior monologue technique is stunning.")
+Review.create!(user_id: george.id, book_id: metamorphosis.id, title: 'Strange and unforgettable', rating: 4,
+               content: 'Read it in one sitting. Deeply unsettling but impossible to stop reading.')
+Review.create!(user_id: fiona.id, book_id: solitude.id, title: 'Worth the effort', rating: 4,
+               content: 'Keeping track of names is tricky but the magic more than makes up for it.')
+Review.create!(user_id: diana.id, book_id: beloved.id, title: 'Difficult but essential', rating: 5,
+               content: 'One of the most important American novels ever written. Do not skip this.')
+Review.create!(user_id: evan.id, book_id: metamorphosis.id, title: 'Kafkaesque in the best way', rating: 4,
+               content: 'Now I understand why his name became an adjective. Brilliant and deeply strange.')
+Review.create!(user_id: ivan.id, book_id: gastby.id, title: 'Style over substance?', rating: 3,
+               content: 'The prose is beautiful but I found Gatsby himself a bit hollow as a character.')
+Review.create!(user_id: hannah.id, book_id: catcher.id, title: 'I get it but...', rating: 3,
+               content: 'Holden is compelling but the cynicism felt repetitive by the end.')
+Review.create!(user_id: george.id, book_id: crime_punishment.id, title: 'Riveting psychological drama', rating: 5,
+               content: "Raskolnikov's descent and redemption is one of literature's great journeys.")
+Review.create!(user_id: ivan.id, book_id: huck_finn.id, title: 'Great adventure story', rating: 4,
+               content: "Twain's humour keeps things light but there's serious depth beneath the surface.")
+Review.create!(user_id: hannah.id, book_id: old_man.id, title: 'Understated brilliance', rating: 5,
+               content: 'Every word earns its place. Hemingway at his most economical and powerful.')
+
 puts 'Successfully seeded the database'
